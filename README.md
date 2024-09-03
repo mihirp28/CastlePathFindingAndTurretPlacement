@@ -22,6 +22,7 @@ Your goal is to write a program to find the shortest path between your location 
 
 You can assume that there is always exactly one p and one @ in the map file. If there is no solution, your program should display path length -1 and not display a path.
 
+### Solution
 1.	parse_map function- Reads text file and processes to create a 2D List
 2.	valid_index function- Check whether the 1st  element of pos is in range 0 to n and also checks if 2nd element is in 0 to m,  if both true returns true or vice versa.
 3.	moves function – Returns valid possible moves considering boundary.
@@ -37,6 +38,28 @@ No direction then returns empty string
 4.	search function- Finds shortest distance using bfs from between your location (p) and the opening(@). It starts from p(current position) and checks all the possible moves while checking visited position respectively. It returns tuple of 3 elements- 1. Number of moves required to reach @(goal) from, pattern of moves, and a true if path was found or (-1,false) if path was not found  
 
 # Turret Placements
+## Problem
+As the legend goes, the benevolent guardian of the castle, needs you to install multiple conscious guardian
+turrets to protect their castle. The problem is that these turrets do not like one another, which means that they have
+to be positioned such that no two turrets can see one another. Write a program called place_turrets. py that takes the
+filename of a map in the same format as Part 1 as well as a single parameter specifying the number k of turrets that you
+have. You can assume k ≥ 1. Assume two turrets can see each other if they are on either the same row, column, or diagonal
+of the map, and there are no walls (defined by ' X') between them. A turret can only be positioned on empty squares
+(marked with .). It’s okay if turrets see you (you are defined by '@'), and you obscure the view between turrets, as if you
+were a wall (they won't attack you). Your program should output a new version of the map, but with the turrets’ locations
+marked with p. Note that exactly one p will already be fixed in the input map file. If there is no solution, your program
+should just display False. Here’s an example on the same sample output on the same map as in Part 1:
+
+### Output
+    [<>djcran@silo ~] python3 place_turrets.py map1.txt 5
+    ....XXX
+    .XXXp..
+    .p..X..
+    .X.X...
+    .X.X.Xp
+    pX.p.X@
+
+### Solution    
 Part 2: Search for Design
 1.	parse_map function- reads text file and processes to create a 2D List
 2. count_turrets function- this function counts total number of p (turrets) present 
