@@ -15,10 +15,10 @@ As you can see, the map consists of N lines (in this case, 6) and M columns (in 
 Your goal is to write a program to find the shortest path between your location and the opening of the magic portal. You can move one square at a time in any of the four principal compass directions, and the program should output a number indicating the shortest distance between the two points, followed by a string of letters (L, R, D, and U for left, right, down, and up) indicating that solution. Your program should take a single command line argument, which is the name of the file containing the map file. For example
 
 ### Output
-[<>djcran@silo ~] python3 mystical_castle.py
-map1.txt Shhhh... quiet while I navigate!
-Here’s the solution I found:
-16 UUURRDDDRRUURRDD
+    [<>djcran@silo ~] python3 mystical_castle.py
+    map1.txt Shhhh... quiet while I navigate!
+    Here’s the solution I found:
+    16 UUURRDDDRRUURRDD
 
 You can assume that there is always exactly one p and one @ in the map file. If there is no solution, your program should display path length -1 and not display a path.
 
